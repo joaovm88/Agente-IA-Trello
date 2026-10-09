@@ -42,5 +42,23 @@ O `.env` está no `.gitignore`; nunca versione chaves.
 
 ## Como testei
 
-- `python -m pytest tests` — testes offline com um quadro falso (status com acento, data sem perder o dia, mover, listar, remover): 4 passando.
-- Teste manual no `adk web` com o meu quadro: *(adicione aqui os prints da conversa ao lado do quadro Trello)*.
+### 1. Testes automáticos (sem Trello real)
+```bash
+python -m pytest tests
+```
+Usam um quadro falso e cobrem: status com acento ("Concluído"), data de vencimento sem perder um dia, mover, listar com filtro, remover e status inválido. Resultado: **4 passando**.
+
+### 2. Teste manual no `adk web` com o meu quadro
+Roteiro seguido, com o quadro do Trello aberto ao lado:
+
+| # | Mensagem enviada | Resultado esperado |
+|---|---|---|
+| 1 | `Oi` | O agente informa a data de hoje e pergunta as tarefas do dia |
+| 2 | `Estudar Python, descrição: revisar funções, para hoje` | Card criado em **A fazer** com a data de hoje (não a do dia anterior) |
+| 3 | `Quais são minhas tarefas?` | Lista o card com nome, descrição e vencimento |
+| 4 | `Comecei a estudar Python` | Card movido para **Em andamento** |
+| 5 | `Terminei de estudar Python` | Card movido para **Concluído** |
+| 6 | `Mostre só as concluídas` | Lista só esse card (testa o acento) |
+| 7 | `Remova a tarefa Estudar Python` | Pede confirmação e, ao confirmar, o card some do quadro |
+
+**Evidência:** *(coloque aqui os prints da conversa no `adk web` ao lado do quadro do Trello)*
