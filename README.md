@@ -49,7 +49,7 @@ python -m pytest tests
 Usam um quadro falso e cobrem: status com acento ("Concluído"), data de vencimento sem perder um dia, mover, listar com filtro, remover e status inválido. Resultado: **4 passando**.
 
 ### 2. Teste manual no `adk web` com o meu quadro
-Roteiro seguido, com o quadro do Trello aberto ao lado:
+Roteiro seguido, com o quadro do Trello aberto ao lado. **Resultado: os 7 passos funcionaram como esperado**, com o agente criando, listando, movendo e removendo cards no meu quadro.
 
 | # | Mensagem enviada | Resultado esperado |
 |---|---|---|
