@@ -17,7 +17,7 @@ Ao começar, informa a data de hoje e pergunta as tarefas do dia, criando um car
 
 ## Como configurar
 
-1. **Trello**: crie um quadro  com as listas `A fazer`, `Em andamento` e `Concluído`. Em <https://trello.com/power-ups/admin> registre um Power-Up e gere a **chave**, o **segredo** e o **token**.
+1. **Trello**: crie um quadro (padrão `DIO`) com as listas `A fazer`, `Em andamento` e `Concluído`. Em <https://trello.com/power-ups/admin> registre um Power-Up e gere a **chave**, o **segredo** e o **token**.
 2. **Gemini**: gere uma chave gratuita no [Google AI Studio](https://aistudio.google.com/) (tem limite diário).
 3. **Ambiente** (Python 3.10+):
    ```bash
